@@ -34,3 +34,7 @@ or
 You probably don't, unless you're an IBM i software developer with very specific needs, or a tinkerer who doesn't want to install Relic for some reason.
 
 I wrote Shelic because I'm releasing software that includes some third-party code as a submodule to my own project.  The third-party code uses Relic to install, and I didn't want to require my users to install Relic just to use my stuff.
+
+## Supported Relic variables
+
+Currently, these build file variables are supported: `&DIR`, `&INTOLIB`, and `&NAME`.

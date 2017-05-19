@@ -81,8 +81,11 @@ if [ ! -e "./$buildFile" ]; then
 fi
 
 topDir=$(realpath "${0%/*}")
+
+# Extract `name:` value.
 name=$(sed -n -e '/name:/{n;p;}' "$buildFile" | sed -e 's/^[[:space:]]*//' -e 's/ *$//')
 
+# Substitute in &INTOLIB, &DIR, and &NAME values.
 sed -e '1,/build:/d' -e '/^ *$/d' -e "s/&INTOLIB/${lib}/g" -e "s|&DIR|${topDir}|g" -e "s/&NAME/${name}/g" "$buildFile" |
 {
     while read cmd; do
