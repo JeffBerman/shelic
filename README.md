@@ -4,6 +4,10 @@ Shelic installs [Relic](https://github.com/OSSILE/RelicPackageManager) packages 
 
 Note: Not all Relic commands are currently supported.  Simple projects seem to build fine.
 
+## Requirements
+
+Shelic requires an IBM i with PASE installed.
+
 ## Installation
 
 Just copy file `shelic` to a location in the IFS on your IBM i, and make sure it has execute privileges (it likely will).
