@@ -15,15 +15,15 @@
 #    limitations under the License.
 
 #
-# Simple installer if RELIC isn't used
+# Simple installer if Relic isn't used
 # 
 
 print_help() {
-   (echo "SHELIC: Install RELIC packages from a shell"
+   (echo "shelic: Install Relic packages from a shell"
     echo
-    echo "Compiles package from source code into the specified library, using RELIC's \`build.txt\` file as a driver.  The current directory should first be set to the package directory.  If compile errors occur, see spool files for more details."
+    echo "Compiles package from source code into the specified library, using Relic's \`build.txt\` file as a driver.  The current directory should first be set to the package directory.  If compile errors occur, see spool files for more details."
     echo
-    echo "Note: Not all RELIC commands are currently supported."
+    echo "Note: Not all Relic commands are currently supported."
     echo
     echo "Usage: shelic library_name"
     echo
@@ -49,7 +49,7 @@ script_name() {
 	echo "${0##*/}"
 }
 
-# Name of RELIC build script
+# Name of Relic build script
 buildFile='build.txt'
 
 # Require one arguments
@@ -74,7 +74,7 @@ if [ ! -d ${libPath} ]; then
     exit 1
 fi
 
-# Verify that RELIC build file exists; if not, we're all done.
+# Verify that Relic build file exists; if not, we're all done.
 if [ ! -e "./$buildFile" ]; then
     echo "$(script_name): File ${buildFile} not found in current directory; exiting." >&2
     exit 1
